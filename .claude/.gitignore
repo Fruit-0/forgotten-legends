@@ -1,0 +1,12 @@
+# Claude Code 本地配置文件（不提交到 Git）
+settings.local.json
+
+# 用户记忆和计划文件（个人工作区）
+# 注意：这些实际存储在用户目录 %USERPROFILE%/.claude/projects/<project>/
+# 但如果在项目内创建，也应忽略
+# memory/
+# plans/
+
+# 临时文件
+*.tmp
+*.log

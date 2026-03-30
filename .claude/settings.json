@@ -1,0 +1,45 @@
+{
+  "project": {
+    "name": "2D俯视角RPG游戏",
+    "description": "使用 Godot 4.6 和 GDScript 开发的独立 2D 俯视角 RPG 游戏"
+  },
+  "permissions": {
+    "allow": [
+      "godot"
+    ],
+    "deny": []
+  },
+  "mcpServers": {
+    "godot": {
+      "command": "npx",
+      "args": ["@coding-solo/godot-mcp"],
+      "env": {
+        "GODOT_PATH": "D:/work_soft/Godot/Godot_v4.6.1-stable_win64.exe/Godot_v4.6.1-stable_win64.exe",
+        "DEBUG": "true"
+      },
+      "autoApprove": [
+        "get_project_info",
+        "get_debug_output"
+      ]
+    }
+  },
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "每次回复时，必须以如下格式开头：\\n\\n【当前角色名】\\n\\n然后才是回答内容。\\n\\n如果当前问题需要多个角色的视角才能完整回答，请在回答中分节呈现，每节以对应角色名开头，例如：\\n\\n【系统策划】\\n[策划视角的内容]\\n\\n【客户端程序】\\n[程序视角的内容]\\n\\n当前活跃角色由用户最新的角色前缀决定；如果用户没有加前缀，默认以【制作人】或最适合问题的单一角色作答。"
+          }
+        ]
+      }
+    ]
+  },
+  "env": {
+    "GODOT_VERSION": "4.6"
+  },
+  "preferences": {
+    "model": "sonnet",
+    "autoCommit": false
+  }
+}
