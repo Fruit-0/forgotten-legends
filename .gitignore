@@ -25,3 +25,6 @@ Thumbs.db
 
 # Cache
 .cache/
+
+# Claude local settings (may contain secrets)
+.claude/settings.local.json
