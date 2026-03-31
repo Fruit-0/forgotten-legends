@@ -1,0 +1,214 @@
+[gd_scene format=3 uid="uid://c2x2vpl1x8wqu"]
+
+[ext_resource type="Script" uid="uid://b7qg3ql4kp63h" path="res://脚本/设置菜单.gd" id="1_bv1qh"]
+
+[node name="设置菜单" type="Control" unique_id=1707960634]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bv1qh")
+
+[node name="背景" type="ColorRect" parent="." unique_id=1882136656]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1, 0.1, 0.15, 1)
+
+[node name="面板" type="PanelContainer" parent="." unique_id=1284817526]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -300.0
+offset_right = 400.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="标题区" type="VBoxContainer" parent="面板" unique_id=1488453608]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="标题" type="Label" parent="面板/标题区" unique_id=2145811381]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "设置"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="分隔线" type="HSeparator" parent="面板/标题区" unique_id=1764808577]
+layout_mode = 2
+
+[node name="内容区" type="VBoxContainer" parent="面板" unique_id=999608222]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="滚动容器" type="ScrollContainer" parent="面板/内容区" unique_id=905942313]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="设置列表" type="VBoxContainer" parent="面板/内容区/滚动容器" unique_id=1678887436]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="画面设置" type="VBoxContainer" parent="面板/内容区/滚动容器/设置列表" unique_id=541453532]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="画面标题" type="Label" parent="面板/内容区/滚动容器/设置列表/画面设置" unique_id=1913754335]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "画面"
+
+[node name="伤害数字行" type="HBoxContainer" parent="面板/内容区/滚动容器/设置列表/画面设置" unique_id=1006348928]
+layout_mode = 2
+
+[node name="标签" type="Label" parent="面板/内容区/滚动容器/设置列表/画面设置/伤害数字行" unique_id=282866138]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "显示伤害数字"
+
+[node name="开关" type="CheckButton" parent="面板/内容区/滚动容器/设置列表/画面设置/伤害数字行" unique_id=1323745379]
+layout_mode = 2
+button_pressed = true
+
+[node name="音频设置" type="VBoxContainer" parent="面板/内容区/滚动容器/设置列表" unique_id=1531859807]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="音频标题" type="Label" parent="面板/内容区/滚动容器/设置列表/音频设置" unique_id=1131295357]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "音频"
+
+[node name="主音量行" type="HBoxContainer" parent="面板/内容区/滚动容器/设置列表/音频设置" unique_id=169037503]
+layout_mode = 2
+
+[node name="标签" type="Label" parent="面板/内容区/滚动容器/设置列表/音频设置/主音量行" unique_id=435102022]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "主音量"
+
+[node name="滑块" type="HSlider" parent="面板/内容区/滚动容器/设置列表/音频设置/主音量行" unique_id=1244446370]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 80.0
+
+[node name="数值标签" type="Label" parent="面板/内容区/滚动容器/设置列表/音频设置/主音量行" unique_id=2040328157]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "80%"
+horizontal_alignment = 2
+
+[node name="音乐音量行" type="HBoxContainer" parent="面板/内容区/滚动容器/设置列表/音频设置" unique_id=332880414]
+layout_mode = 2
+
+[node name="标签" type="Label" parent="面板/内容区/滚动容器/设置列表/音频设置/音乐音量行" unique_id=1816328383]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "音乐"
+
+[node name="滑块" type="HSlider" parent="面板/内容区/滚动容器/设置列表/音频设置/音乐音量行" unique_id=765784006]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 70.0
+
+[node name="数值标签" type="Label" parent="面板/内容区/滚动容器/设置列表/音频设置/音乐音量行" unique_id=1564284156]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "70%"
+horizontal_alignment = 2
+
+[node name="音效音量行" type="HBoxContainer" parent="面板/内容区/滚动容器/设置列表/音频设置" unique_id=1312964276]
+layout_mode = 2
+
+[node name="标签" type="Label" parent="面板/内容区/滚动容器/设置列表/音频设置/音效音量行" unique_id=152571860]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "音效"
+
+[node name="滑块" type="HSlider" parent="面板/内容区/滚动容器/设置列表/音频设置/音效音量行" unique_id=1021767766]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 80.0
+
+[node name="数值标签" type="Label" parent="面板/内容区/滚动容器/设置列表/音频设置/音效音量行" unique_id=1192951597]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "80%"
+horizontal_alignment = 2
+
+[node name="操作设置" type="VBoxContainer" parent="面板/内容区/滚动容器/设置列表" unique_id=1507011709]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="操作标题" type="Label" parent="面板/内容区/滚动容器/设置列表/操作设置" unique_id=1485772837]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "操作"
+
+[node name="鼠标灵敏度行" type="HBoxContainer" parent="面板/内容区/滚动容器/设置列表/操作设置" unique_id=603457073]
+layout_mode = 2
+
+[node name="标签" type="Label" parent="面板/内容区/滚动容器/设置列表/操作设置/鼠标灵敏度行" unique_id=114578506]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "鼠标灵敏度"
+
+[node name="滑块" type="HSlider" parent="面板/内容区/滚动容器/设置列表/操作设置/鼠标灵敏度行" unique_id=1386824137]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.5
+max_value = 2.0
+step = 0.1
+value = 1.0
+
+[node name="数值标签" type="Label" parent="面板/内容区/滚动容器/设置列表/操作设置/鼠标灵敏度行" unique_id=862946001]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "1.0"
+horizontal_alignment = 2
+
+[node name="屏幕震动行" type="HBoxContainer" parent="面板/内容区/滚动容器/设置列表/操作设置" unique_id=1033101441]
+layout_mode = 2
+
+[node name="标签" type="Label" parent="面板/内容区/滚动容器/设置列表/操作设置/屏幕震动行" unique_id=861983431]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "屏幕震动"
+
+[node name="开关" type="CheckButton" parent="面板/内容区/滚动容器/设置列表/操作设置/屏幕震动行" unique_id=2013688852]
+layout_mode = 2
+button_pressed = true
+
+[node name="底部按钮区" type="HBoxContainer" parent="面板" unique_id=1133400781]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 16
+
+[node name="返回按钮" type="Button" parent="面板/底部按钮区" unique_id=1770078556]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "返回"
+
+[node name="恢复默认按钮" type="Button" parent="面板/底部按钮区" unique_id=1114591205]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "恢复默认"
+
+[node name="应用按钮" type="Button" parent="面板/底部按钮区" unique_id=1373563009]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "应用设置"

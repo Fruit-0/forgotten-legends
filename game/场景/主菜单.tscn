@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://c4qf4j4v8x7x1"]
+
+[ext_resource type="Script" uid="uid://bbf7x0l2t8em" path="res://脚本/主菜单.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://du4hxw8q7vkbp" path="res://资源/精灵图/菜单背景_占位图.png" id="2_bg"]
+[ext_resource type="PackedScene" uid="uid://toast8x7x7x7" path="res://场景/提示弹窗.tscn" id="3_toast"]
+
+[node name="主菜单" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="背景" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bg")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="垂直容器" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -150.0
+offset_right = 100.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="标题" type="Label" parent="垂直容器"]
+layout_mode = 2
+text = "我在异世界的那些年"
+horizontal_alignment = 1
+
+[node name="开始游戏按钮" type="Button" parent="垂直容器"]
+layout_mode = 2
+text = "开始游戏"
+
+[node name="继续游戏按钮" type="Button" parent="垂直容器"]
+layout_mode = 2
+text = "继续游戏"
+
+[node name="读取存档按钮" type="Button" parent="垂直容器"]
+layout_mode = 2
+text = "读取存档"
+
+[node name="设置按钮" type="Button" parent="垂直容器"]
+layout_mode = 2
+text = "设置"
+
+[node name="退出游戏按钮" type="Button" parent="垂直容器"]
+layout_mode = 2
+text = "退出游戏"
+
+[node name="版本标签" type="Label" parent="垂直容器"]
+layout_mode = 2
+text = "v0.1.0"
+horizontal_alignment = 1
+
+[node name="提示弹窗" parent="." instance=ExtResource("3_toast")]
+layout_mode = 1
+
+[connection signal="pressed" from="垂直容器/开始游戏按钮" to="." method="_on_开始游戏按钮_pressed"]
+[connection signal="pressed" from="垂直容器/继续游戏按钮" to="." method="_on_继续游戏按钮_pressed"]
+[connection signal="pressed" from="垂直容器/读取存档按钮" to="." method="_on_读取存档按钮_pressed"]
+[connection signal="pressed" from="垂直容器/设置按钮" to="." method="_on_设置按钮_pressed"]
+[connection signal="pressed" from="垂直容器/退出游戏按钮" to="." method="_on_退出游戏按钮_pressed"]
